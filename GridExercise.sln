@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridExercise", "GridExercise\GridExercise.csproj", "{FB0B4488-0CD9-4498-84C8-2E42C7CC3147}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridExercise.Test", "GridExercise.Test\GridExercise.Test.csproj", "{B09A9DEE-DBE9-43B9-9F4A-844BB6510B00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FB0B4488-0CD9-4498-84C8-2E42C7CC3147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB0B4488-0CD9-4498-84C8-2E42C7CC3147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB0B4488-0CD9-4498-84C8-2E42C7CC3147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B09A9DEE-DBE9-43B9-9F4A-844BB6510B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B09A9DEE-DBE9-43B9-9F4A-844BB6510B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B09A9DEE-DBE9-43B9-9F4A-844BB6510B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B09A9DEE-DBE9-43B9-9F4A-844BB6510B00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
