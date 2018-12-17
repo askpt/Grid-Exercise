@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridExercise", "GridExercise\GridExercise.csproj", "{FB0B4488-0CD9-4498-84C8-2E42C7CC3147}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GridExercise", "GridExercise\GridExercise.csproj", "{FB0B4488-0CD9-4498-84C8-2E42C7CC3147}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridExercise.Test", "GridExercise.Test\GridExercise.Test.csproj", "{B09A9DEE-DBE9-43B9-9F4A-844BB6510B00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GridExercise.Test", "GridExercise.Test\GridExercise.Test.csproj", "{B09A9DEE-DBE9-43B9-9F4A-844BB6510B00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
