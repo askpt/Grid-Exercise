@@ -97,7 +97,7 @@ namespace GridExercise.Model
 
         public override string ToString()
         {
-            return $"{Orientation}, {AxisXX}, {AxisYY}";
+            return $"{AxisXX} {AxisYY} {Orientation}";
         }
     }
 }

@@ -3,7 +3,7 @@ using GridExercise.Model;
 
 namespace GridExercise
 {
-    static class Parser
+    public static class Parser
     {
         public static void ParsePath(Pawn pawn, string path)
         {
@@ -48,6 +48,15 @@ namespace GridExercise
             var y = int.Parse(inpTemp[1]);
 
             return (x, y);
+        }
+
+        public static string ProcessInput(string dimensions, string start, string path)
+        {
+            var dim = Parser.ParseDimensions(dimensions);
+            var pawn = Parser.ParsePawn(start, dim);
+            Parser.ParsePath(pawn, path);
+
+            return pawn.ToString();
         }
     }
 }

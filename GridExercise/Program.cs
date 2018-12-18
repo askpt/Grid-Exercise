@@ -16,15 +16,14 @@ namespace GridExercise
             Console.WriteLine("Write Sequence");
             var path = Console.ReadLine();
 
-            var dim = Parser.ParseDimensions(dimensions);
-            var pawn = Parser.ParsePawn(start, dim);
-            Parser.ParsePath(pawn, path);
-            
-            Console.WriteLine(pawn.ToString());
+            var ret = Parser.ProcessInput(dimensions, start, path);
+            Console.WriteLine(ret);
 
             // NewMethod1();
             // NewMethod2();
         }
+
+        
 
         private static void NewMethod2()
         {
