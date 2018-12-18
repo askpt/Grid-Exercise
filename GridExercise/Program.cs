@@ -7,8 +7,22 @@ namespace GridExercise
     {
         static void Main(string[] args)
         {
-            NewMethod1();
-            NewMethod2();
+            Console.WriteLine("Write dimensions");
+            var dimensions = Console.ReadLine();
+
+            Console.WriteLine("Write Starting Point");
+            var start = Console.ReadLine();
+
+            Console.WriteLine("Write Sequence");
+            var path = Console.ReadLine();
+
+            var pawn = Parser.ParsePawn(start);
+            Parser.ParsePath(pawn, path);
+            
+            Console.WriteLine(pawn.ToString());
+
+            // NewMethod1();
+            // NewMethod2();
         }
 
         private static void NewMethod2()
@@ -17,7 +31,7 @@ namespace GridExercise
 
             Parser.ParsePath(pawn, "MMRMMRMRRM");
 
-            Console.WriteLine($"{pawn.Orientation}, {pawn.AxisXX}, {pawn.AxisYY}");
+            Console.WriteLine(pawn.ToString());
         }
 
         private static void NewMethod1()
@@ -26,7 +40,7 @@ namespace GridExercise
 
             Parser.ParsePath(pawn, "LMLMLMLMM");
 
-            Console.WriteLine($"{pawn.Orientation}, {pawn.AxisXX}, {pawn.AxisYY}");
+            Console.WriteLine(pawn.ToString());
         }
     }
 }

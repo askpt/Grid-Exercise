@@ -71,5 +71,9 @@ namespace GridExercise.Model
                     break;
             }
         }
+
+        public override string ToString(){
+            return $"{Orientation}, {AxisXX}, {AxisYY}";
+        }
     }
 }

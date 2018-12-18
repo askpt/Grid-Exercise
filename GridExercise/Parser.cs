@@ -1,3 +1,4 @@
+using System;
 using GridExercise.Model;
 
 namespace GridExercise
@@ -27,6 +28,16 @@ namespace GridExercise
             }
 
             ParsePath(pawn, path.Substring(1));
+        }
+
+        public static Pawn ParsePawn(string input)
+        {
+            var inpTemp = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            var x = int.Parse(inpTemp[0]);
+            var y = int.Parse(inpTemp[1]);
+
+            return new Pawn(inpTemp[2][0], x, y);
         }
     }
 }
