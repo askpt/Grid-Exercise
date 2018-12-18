@@ -7,12 +7,23 @@ namespace GridExercise.Model
         public char Orientation { get; set; }
         public int AxisXX { get; set; }
         public int AxisYY { get; set; }
+        public (int X, int Y) MazeDimensions { get; set; }
 
-        public Pawn(char orientation, int axisXX, int axisYY)
+        public Pawn(char orientation, int axisXX, int axisYY, (int X, int Y) dimensions)
         {
             Orientation = orientation;
             AxisXX = axisXX;
             AxisYY = axisYY;
+            MazeDimensions = dimensions;
+
+            if (MazeDimensions.X < AxisXX || AxisXX < 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            if (MazeDimensions.Y < AxisYY || AxisYY < 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
         }
 
         public void RotateLeft()
@@ -58,21 +69,34 @@ namespace GridExercise.Model
             switch (Orientation)
             {
                 case 'N':
-                    AxisYY++;
+                    if (MazeDimensions.Y > AxisYY)
+                    {
+                        AxisYY++;
+                    }
                     break;
                 case 'E':
-                    AxisXX++;
+                    if (MazeDimensions.X > AxisXX)
+                    {
+                        AxisXX++;
+                    }
                     break;
                 case 'S':
-                    AxisYY--;
+                    if (AxisYY > 0)
+                    {
+                        AxisYY--;
+                    }
                     break;
                 case 'W':
-                    AxisXX--;
+                    if (AxisXX > 0)
+                    {
+                        AxisXX--;
+                    }
                     break;
             }
         }
 
-        public override string ToString(){
+        public override string ToString()
+        {
             return $"{Orientation}, {AxisXX}, {AxisYY}";
         }
     }

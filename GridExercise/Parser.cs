@@ -30,14 +30,24 @@ namespace GridExercise
             ParsePath(pawn, path.Substring(1));
         }
 
-        public static Pawn ParsePawn(string input)
+        public static Pawn ParsePawn(string input, (int X, int Y) dimensions)
         {
             var inpTemp = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
             var x = int.Parse(inpTemp[0]);
             var y = int.Parse(inpTemp[1]);
 
-            return new Pawn(inpTemp[2][0], x, y);
+            return new Pawn(inpTemp[2][0], x, y, dimensions);
+        }
+
+        public static (int X, int Y) ParseDimensions(string input)
+        {
+            var inpTemp = input.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            var x = int.Parse(inpTemp[0]);
+            var y = int.Parse(inpTemp[1]);
+
+            return (x, y);
         }
     }
 }
